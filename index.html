@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كويز الثقافة العامة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <h1>اختبر ثقافتك العامة</h1>
+            <p>أدخل اسمك للمشاركة في الكويز ومعرفة نتيجتك.</p>
+            <input type="text" id="username" placeholder="الاسم الكامل" autocomplete="off">
+            <button id="start-btn">ابدأ الآن</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div id="quiz-header">
+                <h2 id="question">نص السؤال هنا</h2>
+            </div>
+            <div id="answers-container">
+                <!-- أزرار الإجابات ستظهر هنا -->
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="question-counter"></p>
+        </div>
+    </div>
+
+    <!-- مكتبات Firebase (يجب أن تكون قبل ملفات JS الخاصة بك) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
